@@ -1,6 +1,5 @@
 message = input("Enter your message: ")
-words = message.split(' ')
-replacement =''
+
 ##for word in words:
     #if word == ":)":
       #  word = "😊"
@@ -10,16 +9,19 @@ replacement =''
         #word = "😭"
     #replacement +=   word + " "
 #print (replacement)
-
-emojis = {
-    ":)" : "😊",
-    ":(" : "😔",
-    "cry" : "😭",
-    "aww" : "😍"
-}
-for word in words:
-    check = emojis.get(word.lower(), "!")
-    if  check != "!":
-        replacement += check
-    else: replacement += word + " "
-print (replacement)
+def emoji_converter(message):
+    words = message.split(' ')
+    replacement =''
+    emojis = {
+        ":)" : "😊",
+        ":(" : "😔",
+        "cry" : "😭",
+        "aww" : "😍"
+    }
+    for word in words:
+        check = emojis.get(word.lower(), "!")
+        if  check != "!":
+            replacement += check
+        else: replacement += word + " "
+    return replacement
+print(emoji_converter(message))
