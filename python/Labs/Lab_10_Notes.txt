@@ -1,0 +1,29 @@
+AI
+-->agents 
+----> data sceince (EDA)
+-------> When predicting non-existent problem = Machine Learning
+ML 
+    1. computer vision 
+    2. NLP 
+    3. ASP
+advanced ML = Deep Learning
+
+
+STEPS TO ML:
+    1. ingredient (Data gathering)
+    2. grocery store jainga (Online Article/websites)
+    3. Preprocessing (cleaning, filling)
+    4. cooking technique (any ML technique)
+    5. Tasting (Model Evaluation)
+    6. khud khaonga (bhar me jao sab)
+    7. Presentation (Zindabad Mubashir Puttar)
+
+TWO TYPES OF MACHINE Learning:
+    1. Supervised Learning
+    2. Unsupervised Learning
+
+Supervised: when the value you want to train for is in the dataset (Target Column)
+
+    YES/NO = CLASSIFICATION PROBLEM
+
+    NUMBERS = REGRESSION PROBLEM 
