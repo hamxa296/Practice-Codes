@@ -1,0 +1,69 @@
+Three types of memory allocations
+
+1. BSS --> static
+2. stack 
+3. Dynamic
+
+RAM Sections:
+
+1. Kernel Space ---> High address
+2. stack
+3. Heap         3-6 (user space)
+4. BSS
+5. Data
+6. text ---> Low address
+/////////////////// HIGHER THE ADRESS FASTER THE MEMORY 
+KERNEL SPACE: 
+--- only OS authorised peeps allowed (GHQ)
+--- Also includes IO Operators 
+
+STACK: 
+--- First in Last out 
+--- Always fixed, can never be changed
+--- You cant remove variables to your wish (fixed sequence)
+--- all regular variables go in stack 
+--- Stack cant be used for chrome, cz we dont necessarily close the first tab at last 
+
+HEAP:
+--- shopping bag expanding 
+--- memory not fixed
+--- No tarteeb 
+--- can use delete 
+--- new int -> child born no name given (no record)
+--- new int -> this essentially means that an adress has been allocated for storing 
+    int values but we dont have the name 
+    (To get the name we allocate the adress to a pointer) --> int *x = new int 
+    *x is stored in stack.
+--- delete x wont delete x but rather delete the adress allocated and the memory allocated
+    (x still remains!)
+
+MEMORY LEAK:
+
+--- banda zinda h par record me mar gaya :)
+--- int *ptr = new int 
+--- ptr = new int (again)
+--- the first data still remain but ptr now points to the newer 
+    heap memory (this means record lost for the first one but data exists)
+--- This memory leak would only be fixed when PC is shut down or voltage is cut from RAM 
+
+BLOCK STARTED BY SYMBOL (BSS):
+--- (go through static variables)
+--- Allows sharing of memory betwen objects of classes (not limited to this, jus an example)
+
+STACKKKKK EXAMPLE:
+
+1.  main goes into stack
+2.  Any other functions in main called (stored in stack)
+3.  Any functions in those functions stored in stack 
+4.  When each function is completed --> the function is popped out of the Stack
+//// Stack for functions is diff from stack for variables
+                ///////////////////////////////////////////CLASSES///////////////////////////////////////////////////
+
+--- Given that student and teacher are derived from the person class, we are allowed to do: Person *ptr = new student
+--- This essentially means that we are assuming that student might change into an object one (idk what he meant by this)
+
+AN ARRAY IS NEVER DYNAMIC!!!!! 
+
+--- essentially copying an array into a newer, larger array and naming it the same (fakng dynamicness)
+--- dont directly change pointer names (no shortcut poora kaam)
+---  
