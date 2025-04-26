@@ -58,18 +58,18 @@ public:
     {
         cout << "Destructing student \n";
     }
-    student operator>(const student &other)
+    bool operator>(const student &other)
     {
         if (GPA > other.GPA)
         {
-            return student(getId(), name, age, height, weight, GPA, course);
+            return true;
         }
         else if (other.GPA > GPA)
         {
-            return student(other.getId(), other.name, other.age, other.height, other.weight, other.GPA, other.course);
+            return false;
         }
         else
-            return student(0, "", 0, 0, 0, 0, "");
+            return false;
     }
 };
 int main()
@@ -78,11 +78,13 @@ int main()
     int id = S1.getId();
     cout << "Id of " << S1.name << ": " << id << endl;
     student S2(306, "ali", 18, 170, 75, 3.72, "Ai");
-    student higherS = S2 > S1;
-    if (higherS.getId() == 0)
-        cout << "GPA is equal!" << endl;
-    cout << "Student with higher GPA:" << endl;
-    higherS.display();
-
+    if (S1 > S2)
+    {
+        cout << S1.name << " has higher GPA" << endl;
+    }
+    else
+    {
+        cout << S1.name << " doesn't have higher GPA" << endl;
+    }
     return 0;
 }
