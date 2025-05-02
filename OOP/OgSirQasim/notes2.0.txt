@@ -1,0 +1,9 @@
+//////////////////////////////////////////////POLYMORPHISM///////////////////////////////////////////////
+
+Two types of POLYMORPHISM:
+    1. runtime POLYMORPHISM -->  (VIRTUAL) (Unrealistic)
+    2. compiletime POLYMORPHISM --> overloading or normal owerwriting
+
+new keyword -- doesnt know at compiletime whether memory alloc will occurr or not
+
+TWO Types == Function OR Object(class)
