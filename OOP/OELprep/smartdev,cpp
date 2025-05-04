@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+class SmartDevice
+{
+private:
+    string name;
+
+public:
+    virtual void displayStatus() const = 0;
+    virtual void updateSetting(int val) = 0;
+    friend void printDeviceDetails(const SmartDevice &);
+};
+class SmartLight : public SmartDevice
+{
+    int brightnessLevel;
+
+public:
+    void displayStatus()
+    {
+        cout << "Brightness is set at: " << brightnessLevel << endl;
+    }
+    void updateSetting(int val)
+    {
+        cout << "Updating brightness to " << val << endl;
+        brightnessLevel = val;
+    }
+};
+class SmartThermostat : virtual public SmartDevice
+{
+    int temperature;
+public:
+void displayStatus()
+{
+    cout << "Temperature is set at: " << temperature << endl;
+}
+void updateSetting(int val)
+    {
+        cout << "Updating temperature to " << val << endl;
+        temperature = val;
+    }
+};
+int main()
+{
+
+    return 0;
+}
