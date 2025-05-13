@@ -5,7 +5,9 @@
 }
 catch (Type variable) {
     Code to handle the error
-}*/
+}
+  Whener you throw a direct string, you catch a const char* error!
+*/
 
 #include <iostream>
 using namespace std;

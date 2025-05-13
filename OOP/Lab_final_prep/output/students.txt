@@ -1,0 +1,3 @@
+Name: Ali, Roll No: 101, Course: CS
+Name: Sara, Roll No: 102, Course: AI
+Name: Zain, Roll No: 103, Course: EE
